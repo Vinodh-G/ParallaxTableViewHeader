@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		19B5CBFC19FCDCC600340B60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CBFB19FCDCC600340B60 /* main.m */; };
 		19B5CBFF19FCDCC600340B60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CBFE19FCDCC600340B60 /* AppDelegate.m */; };
-		19B5CC0219FCDCC600340B60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CC0119FCDCC600340B60 /* ViewController.m */; };
+		19B5CC0219FCDCC600340B60 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CC0119FCDCC600340B60 /* StoryViewController.m */; };
 		19B5CC0519FCDCC600340B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B5CC0319FCDCC600340B60 /* Main.storyboard */; };
 		19B5CC0719FCDCC600340B60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B5CC0619FCDCC600340B60 /* Images.xcassets */; };
 		19B5CC0A19FCDCC600340B60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B5CC0819FCDCC600340B60 /* LaunchScreen.xib */; };
 		19B5CC1619FCDCC600340B60 /* ParallaxTableViewHeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CC1519FCDCC600340B60 /* ParallaxTableViewHeaderTests.m */; };
+		19B5CC2119FCDD7D00340B60 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CC2019FCDD7D00340B60 /* ParallaxHeaderView.m */; };
+		19B5CC2419FCDDC500340B60 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CC2319FCDDC500340B60 /* UIImage+ImageEffects.m */; };
+		19B5CC2A19FCF12E00340B60 /* StoryCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B5CC2919FCF12E00340B60 /* StoryCommentCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19B5CBF619FCDCC600340B60 /* ParallaxTableViewHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxTableViewHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B5CBF619FCDCC600340B60 /* Parallax Header.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parallax Header.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B5CBFA19FCDCC600340B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B5CBFB19FCDCC600340B60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19B5CBFD19FCDCC600340B60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19B5CBFE19FCDCC600340B60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19B5CC0019FCDCC600340B60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19B5CC0119FCDCC600340B60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19B5CC0019FCDCC600340B60 /* StoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		19B5CC0119FCDCC600340B60 /* StoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
 		19B5CC0419FCDCC600340B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B5CC0619FCDCC600340B60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		19B5CC0919FCDCC600340B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		19B5CC0F19FCDCC600340B60 /* ParallaxTableViewHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxTableViewHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B5CC1419FCDCC600340B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B5CC1519FCDCC600340B60 /* ParallaxTableViewHeaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxTableViewHeaderTests.m; sourceTree = "<group>"; };
+		19B5CC1F19FCDD7D00340B60 /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
+		19B5CC2019FCDD7D00340B60 /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
+		19B5CC2219FCDDC500340B60 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		19B5CC2319FCDDC500340B60 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		19B5CC2819FCF12D00340B60 /* StoryCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryCommentCell.h; sourceTree = "<group>"; };
+		19B5CC2919FCF12E00340B60 /* StoryCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryCommentCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +81,7 @@
 		19B5CBF719FCDCC600340B60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19B5CBF619FCDCC600340B60 /* ParallaxTableViewHeader.app */,
+				19B5CBF619FCDCC600340B60 /* Parallax Header.app */,
 				19B5CC0F19FCDCC600340B60 /* ParallaxTableViewHeaderTests.xctest */,
 			);
 			name = Products;
@@ -81,13 +90,19 @@
 		19B5CBF819FCDCC600340B60 /* ParallaxTableViewHeader */ = {
 			isa = PBXGroup;
 			children = (
+				19B5CC2E19FD02A400340B60 /* Extensions */,
+				19B5CC2819FCF12D00340B60 /* StoryCommentCell.h */,
+				19B5CC2919FCF12E00340B60 /* StoryCommentCell.m */,
+				19B5CC1F19FCDD7D00340B60 /* ParallaxHeaderView.h */,
+				19B5CC2019FCDD7D00340B60 /* ParallaxHeaderView.m */,
 				19B5CBFD19FCDCC600340B60 /* AppDelegate.h */,
 				19B5CBFE19FCDCC600340B60 /* AppDelegate.m */,
-				19B5CC0019FCDCC600340B60 /* ViewController.h */,
-				19B5CC0119FCDCC600340B60 /* ViewController.m */,
+				19B5CC0019FCDCC600340B60 /* StoryViewController.h */,
+				19B5CC0119FCDCC600340B60 /* StoryViewController.m */,
 				19B5CC0319FCDCC600340B60 /* Main.storyboard */,
 				19B5CC0619FCDCC600340B60 /* Images.xcassets */,
 				19B5CC0819FCDCC600340B60 /* LaunchScreen.xib */,
+				19B5CC2519FCE30400340B60 /* Resources */,
 				19B5CBF919FCDCC600340B60 /* Supporting Files */,
 			);
 			path = ParallaxTableViewHeader;
@@ -119,12 +134,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		19B5CC2519FCE30400340B60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19B5CC2E19FD02A400340B60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19B5CC2219FCDDC500340B60 /* UIImage+ImageEffects.h */,
+				19B5CC2319FCDDC500340B60 /* UIImage+ImageEffects.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19B5CBF519FCDCC600340B60 /* ParallaxTableViewHeader */ = {
+		19B5CBF519FCDCC600340B60 /* Parallax Header */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19B5CC1919FCDCC600340B60 /* Build configuration list for PBXNativeTarget "ParallaxTableViewHeader" */;
+			buildConfigurationList = 19B5CC1919FCDCC600340B60 /* Build configuration list for PBXNativeTarget "Parallax Header" */;
 			buildPhases = (
 				19B5CBF219FCDCC600340B60 /* Sources */,
 				19B5CBF319FCDCC600340B60 /* Frameworks */,
@@ -134,9 +165,9 @@
 			);
 			dependencies = (
 			);
-			name = ParallaxTableViewHeader;
+			name = "Parallax Header";
 			productName = ParallaxTableViewHeader;
-			productReference = 19B5CBF619FCDCC600340B60 /* ParallaxTableViewHeader.app */;
+			productReference = 19B5CBF619FCDCC600340B60 /* Parallax Header.app */;
 			productType = "com.apple.product-type.application";
 		};
 		19B5CC0E19FCDCC600340B60 /* ParallaxTableViewHeaderTests */ = {
@@ -188,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19B5CBF519FCDCC600340B60 /* ParallaxTableViewHeader */,
+				19B5CBF519FCDCC600340B60 /* Parallax Header */,
 				19B5CC0E19FCDCC600340B60 /* ParallaxTableViewHeaderTests */,
 			);
 		};
@@ -219,9 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B5CC0219FCDCC600340B60 /* ViewController.m in Sources */,
+				19B5CC2119FCDD7D00340B60 /* ParallaxHeaderView.m in Sources */,
+				19B5CC2419FCDDC500340B60 /* UIImage+ImageEffects.m in Sources */,
+				19B5CC0219FCDCC600340B60 /* StoryViewController.m in Sources */,
 				19B5CBFF19FCDCC600340B60 /* AppDelegate.m in Sources */,
 				19B5CBFC19FCDCC600340B60 /* main.m in Sources */,
+				19B5CC2A19FCF12E00340B60 /* StoryCommentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +272,7 @@
 /* Begin PBXTargetDependency section */
 		19B5CC1119FCDCC600340B60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 19B5CBF519FCDCC600340B60 /* ParallaxTableViewHeader */;
+			target = 19B5CBF519FCDCC600340B60 /* Parallax Header */;
 			targetProxy = 19B5CC1019FCDCC600340B60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -407,13 +441,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19B5CC1919FCDCC600340B60 /* Build configuration list for PBXNativeTarget "ParallaxTableViewHeader" */ = {
+		19B5CC1919FCDCC600340B60 /* Build configuration list for PBXNativeTarget "Parallax Header" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19B5CC1A19FCDCC600340B60 /* Debug */,
 				19B5CC1B19FCDCC600340B60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19B5CC1C19FCDCC600340B60 /* Build configuration list for PBXNativeTarget "ParallaxTableViewHeaderTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +457,7 @@
 				19B5CC1E19FCDCC600340B60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
