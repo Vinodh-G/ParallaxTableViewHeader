@@ -18,7 +18,8 @@ set the parallaxHeaderView to UITableViewHeader as shown below
 
 override scrollViewDelegate method
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
-pass the UITableView or UIScrollView scrolling  contentOffset to ParallaxHeaderView as shown below.
+
+Pass the UITableView or UIScrollView scrolling  contentOffset to ParallaxHeaderView as shown below.
 ![solarized vim](http://i.imgur.com/p4mbQeB.png)
 
 Credits
