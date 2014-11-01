@@ -22,6 +22,8 @@ override scrollViewDelegate method
 Pass the UITableView or UIScrollView scrolling  contentOffset to ParallaxHeaderView as shown below.
 ![solarized vim](http://i.imgur.com/p4mbQeB.png)
 
+"thats it"
+
 Credits
 ========
 Used UIImage+ImageEffects (Extentions) of Created by Aaron Pang,
