@@ -16,4 +16,5 @@
 + (id)parallaxHeaderViewWithImage:(UIImage *)image forSize:(CGSize)headerSize;
 + (id)parallaxHeaderViewWithCGSize:(CGSize)headerSize;
 - (void)layoutHeaderViewForScrollViewOffset:(CGPoint)offset;
+- (void)refreshBlurViewForNewImage;
 @end

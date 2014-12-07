@@ -73,6 +73,13 @@ static CGFloat kLabelPaddingDist = 8.0f;
     }
 }
 
+- (void)refreshBlurViewForNewImage
+{
+    UIImage *screenShot = [self screenShotOfView:self];
+    screenShot = [screenShot applyBlurWithRadius:5 tintColor:[UIColor colorWithWhite:0.6 alpha:0.2] saturationDeltaFactor:1.0 maskImage:nil];
+    self.bluredImageView.image = screenShot;
+}
+
 #pragma mark -
 #pragma mark Private
 
@@ -126,13 +133,6 @@ static CGFloat kLabelPaddingDist = 8.0f;
     UIGraphicsEndImageContext();
     
     return image;
-}
-
-- (void)refreshBlurViewForNewImage
-{
-    UIImage *screenShot = [self screenShotOfView:self];
-    screenShot = [screenShot applyBlurWithRadius:5 tintColor:[UIColor colorWithWhite:0.6 alpha:0.2] saturationDeltaFactor:1.0 maskImage:nil];
-    self.bluredImageView.image = screenShot;
 }
 
 @end

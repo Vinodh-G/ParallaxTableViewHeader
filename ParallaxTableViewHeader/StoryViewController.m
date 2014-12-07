@@ -36,6 +36,12 @@
     [self.mainTableView setTableHeaderView:headerView];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [(ParallaxHeaderView *)self.mainTableView.tableHeaderView refreshBlurViewForNewImage];
+    [super viewDidAppear:animated];
+}
+
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
