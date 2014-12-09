@@ -15,6 +15,7 @@
 @interface ParallaxHeaderView ()
 @property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *subView;
 @property (nonatomic) IBOutlet UIImageView *bluredImageView;
 @end
 
@@ -30,21 +31,25 @@ static CGFloat kLabelPaddingDist = 8.0f;
 {
     ParallaxHeaderView *headerView = [[ParallaxHeaderView alloc] initWithFrame:CGRectMake(0, 0, headerSize.width, headerSize.height)];
     headerView.headerImage = image;
-    [headerView initialSetup];
+    [headerView initialSetupForDefaultHeader];
     return headerView;
     
 }
 
-+ (id)parallaxHeaderViewWithCGSize:(CGSize)headerSize;
++ (id)parallaxHeaderViewWithSubView:(UIView *)subView
 {
-    ParallaxHeaderView *headerView = [[ParallaxHeaderView alloc] initWithFrame:CGRectMake(0, 0, headerSize.width, headerSize.height)];
-    [headerView initialSetup];
+    ParallaxHeaderView *headerView = [[ParallaxHeaderView alloc] initWithFrame:CGRectMake(0, 0, subView.frame.size.width, subView.frame.size.height)];
+    [headerView initialSetupForCustomSubView:subView];
     return headerView;
 }
 
 - (void)awakeFromNib
 {
-    [self initialSetup];
+    if (self.subView)
+        [self initialSetupForCustomSubView:self.subView];
+    else
+        [self initialSetupForDefaultHeader];
+    
     [self refreshBlurViewForNewImage];
 }
 
@@ -83,7 +88,7 @@ static CGFloat kLabelPaddingDist = 8.0f;
 #pragma mark -
 #pragma mark Private
 
-- (void)initialSetup
+- (void)initialSetupForDefaultHeader
 {
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     self.imageScrollView = scrollView;
@@ -115,6 +120,23 @@ static CGFloat kLabelPaddingDist = 8.0f;
     
     [self addSubview:self.imageScrollView];
     
+    [self refreshBlurViewForNewImage];
+}
+
+- (void)initialSetupForCustomSubView:(UIView *)subView
+{
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+    self.imageScrollView = scrollView;
+    self.subView = subView;
+    subView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self.imageScrollView addSubview:subView];
+    
+    self.bluredImageView = [[UIImageView alloc] initWithFrame:subView.frame];
+    self.bluredImageView.autoresizingMask = subView.autoresizingMask;
+    self.bluredImageView.alpha = 0.0f;
+    [self.imageScrollView addSubview:self.bluredImageView];
+    
+    [self addSubview:self.imageScrollView];
     [self refreshBlurViewForNewImage];
 }
 

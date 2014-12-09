@@ -14,7 +14,7 @@
 @property (nonatomic) UIImage *headerImage;
 
 + (id)parallaxHeaderViewWithImage:(UIImage *)image forSize:(CGSize)headerSize;
-+ (id)parallaxHeaderViewWithCGSize:(CGSize)headerSize;
++ (id)parallaxHeaderViewWithSubView:(UIView *)subView;
 - (void)layoutHeaderViewForScrollViewOffset:(CGPoint)offset;
 - (void)refreshBlurViewForNewImage;
 @end

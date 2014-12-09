@@ -29,9 +29,8 @@
     [StoryCommentCell setTableViewWidth:self.mainTableView.frame.size.width];    
     
     // Create ParallaxHeaderView with specified size, and set it as uitableView Header, that's it
-    ParallaxHeaderView *headerView = [ParallaxHeaderView parallaxHeaderViewWithCGSize:CGSizeMake(self.mainTableView.frame.size.width, 300)];
+    ParallaxHeaderView *headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:[UIImage imageNamed:@"HeaderImage"] forSize:CGSizeMake(self.mainTableView.frame.size.width, 300)];
     headerView.headerTitleLabel.text = self.story[@"story"];
-    headerView.headerImage = [UIImage imageNamed:@"HeaderImage"];
     
     [self.mainTableView setTableHeaderView:headerView];
 }
