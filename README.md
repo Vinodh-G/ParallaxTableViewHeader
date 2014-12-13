@@ -24,6 +24,18 @@ Pass the UITableView or UIScrollView scrolling  contentOffset to ParallaxHeaderV
 
 "thats it"
 
+Swift
+======
+    let headerView: ParallaxHeaderView = ParallaxHeaderView.parallaxHeaderViewWithImage(UIImage(named: "YourImageName"), forSize: CGSizeMake(self.tableview.frame.size.height, 300)) as ParallaxHeaderView
+    self.tableview.tableHeaderView = headerView
+
+    func  scrollViewDidScroll(scrollView: UIScrollView) {
+        let header: ParallaxHeaderView = self.tableview.tableHeaderView as ParallaxHeaderView
+        header.layoutHeaderViewForScrollViewOffset(scrollView.contentOffset)
+
+        self.tableview.tableHeaderView = header
+    }
+
 Credits
 ========
 Used UIImage+ImageEffects (Extentions) of Created by Aaron Pang,
