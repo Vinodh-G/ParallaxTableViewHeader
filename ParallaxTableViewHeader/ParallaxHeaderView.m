@@ -150,7 +150,7 @@ static CGFloat kLabelPaddingDist = 8.0f;
 - (UIImage *)screenShotOfView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(kDefaultHeaderFrame.size, YES, 0.0);
-    [self drawViewHierarchyInRect:kDefaultHeaderFrame afterScreenUpdates:YES];
+    [self drawViewHierarchyInRect:kDefaultHeaderFrame afterScreenUpdates:NO];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
