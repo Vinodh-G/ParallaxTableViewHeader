@@ -33,20 +33,20 @@ class ParallaxHeaderView: UIView {
     // MARK: - Initializer
 
     init(image: UIImage, forSize headerSize: CGSize) {
-        super.init(frame: CGRectMake(0, 0, headerSize.width, headerSize.height))
+        super.init(frame: CGRect(x: 0, y: 0, width: headerSize.width, height: headerSize.height))
 
-        kDefaultHeaderFrame = CGRectMake(0, 0, frame.size.width, frame.size.height)
+        kDefaultHeaderFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
 
         headerImage = image
         initialSetupForDefaultHeader()
     }
 
     init(subView: UIView) {
-        super.init(frame: CGRectMake(0, 0, subView.frame.size.width, subView.frame.size.height))
+        super.init(frame: CGRect(x: 0, y: 0, width: subView.frame.size.width, height: subView.frame.size.height))
 
-        kDefaultHeaderFrame = CGRectMake(0, 0, frame.size.width, frame.size.height)
+        kDefaultHeaderFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
 
-        initialSetupForCustomSubView(subView)
+        initialSetupForCustomSubView(subView: subView)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -57,7 +57,7 @@ class ParallaxHeaderView: UIView {
         super.awakeFromNib()
 
         if let subView = self.subView {
-            initialSetupForCustomSubView(subView)
+            initialSetupForCustomSubView(subView: subView)
         }
         else {
             initialSetupForDefaultHeader()
@@ -75,7 +75,7 @@ class ParallaxHeaderView: UIView {
             clipsToBounds = true
         }
         else {
-            let delta: CGFloat = fabs(min(0.0, offset.y))
+            let delta: CGFloat = abs(min(0.0, offset.y))
             var rect = kDefaultHeaderFrame
             rect.origin.y -= delta
             rect.size.height += delta
@@ -86,8 +86,8 @@ class ParallaxHeaderView: UIView {
     }
 
     func refreshBlurViewForNewImage() {
-        var screenShot = screenShotOfView(self)
-        screenShot = screenShot.applyBlurWithRadius(5, tintColor: UIColor.whiteColor().colorWithAlphaComponent(0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
+        var screenShot = screenShotOfView(view: self)
+        screenShot = screenShot.applyBlurWithRadius(blurRadius: 5, tintColor: UIColor.white.withAlphaComponent(0.2), saturationDeltaFactor: 1.0, maskImage: nil)!
         bluredImageView.image = screenShot
     }
 
@@ -97,14 +97,14 @@ class ParallaxHeaderView: UIView {
         imageScrollView = UIScrollView(frame: bounds)
         imageView = UIImageView(frame: imageScrollView.bounds)
         imageView.autoresizingMask = [
-            .FlexibleLeftMargin,
-            .FlexibleRightMargin,
-            .FlexibleTopMargin,
-            .FlexibleBottomMargin,
-            .FlexibleHeight,
-            .FlexibleWidth
+            .flexibleLeftMargin,
+            .flexibleRightMargin,
+            .flexibleTopMargin,
+            .flexibleBottomMargin,
+            .flexibleHeight,
+            .flexibleWidth
         ]
-        imageView.contentMode = .ScaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         imageView.image = headerImage
         imageScrollView.addSubview(imageView)
 
@@ -115,11 +115,11 @@ class ParallaxHeaderView: UIView {
         labelRect.size.height = labelRect.size.height - 2 * kLabelPaddingDist
 
         headerTitleLabel = UILabel(frame: labelRect)
-        headerTitleLabel.textAlignment = .Center
+        headerTitleLabel.textAlignment = .center
         headerTitleLabel.numberOfLines = 0
-        headerTitleLabel.lineBreakMode = .ByWordWrapping
+        headerTitleLabel.lineBreakMode = .byWordWrapping
         headerTitleLabel.autoresizingMask = imageView.autoresizingMask
-        headerTitleLabel.textColor = UIColor.whiteColor()
+        headerTitleLabel.textColor = UIColor.white
         headerTitleLabel.font = UIFont(name: "AvenirNextCondensed-Regular", size: 23)
         imageScrollView.addSubview(headerTitleLabel)
 
@@ -137,12 +137,12 @@ class ParallaxHeaderView: UIView {
         imageScrollView = scrollView
         self.subView = subView
         subView.autoresizingMask = [
-            .FlexibleLeftMargin,
-            .FlexibleRightMargin,
-            .FlexibleTopMargin,
-            .FlexibleBottomMargin,
-            .FlexibleHeight,
-            .FlexibleWidth
+            .flexibleLeftMargin,
+            .flexibleRightMargin,
+            .flexibleTopMargin,
+            .flexibleBottomMargin,
+            .flexibleHeight,
+            .flexibleWidth
         ]
         imageScrollView.addSubview(subView)
 
@@ -157,10 +157,10 @@ class ParallaxHeaderView: UIView {
 
     private func screenShotOfView(view: UIView) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(kDefaultHeaderFrame.size, true, 0.0)
-        drawViewHierarchyInRect(kDefaultHeaderFrame, afterScreenUpdates: false)
+        drawHierarchy(in: kDefaultHeaderFrame, afterScreenUpdates: false)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 }
