@@ -39,5 +39,5 @@ Swift
 Credits
 ========
 Used UIImage+ImageEffects (Extentions) of Created by Aaron Pang,
-achiving Bluring effect to headerView, support from iOS 7.0 onwords
-
+achiving Bluring effect to headerView, support from iOS 7.0 onwords  
+Swift Port created by Christopher Reitz
